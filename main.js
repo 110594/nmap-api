@@ -4,11 +4,11 @@ const es = require('evilscan')
 const Express = require('express')
 const { readFileSync } = require('fs')
 
-const { PORT } = JSON.parse(readFileSync('./config.json'))
+const { PATH, PORT } = JSON.parse(readFileSync('./config.json'))
 
 Express()
     .use(require('cors')())
-    .get('/', async (req, res) => {
+    .get(`/${PATH}`, async (req, res) => {
         let ip = req.query.ip
         let pr = req.query.pr
 
@@ -46,4 +46,4 @@ Express()
         res.end(dataResponse)
     })
     .all('*', (_, res) => res.end('nmap-api // github.com/110594'))
-    .listen(process.env.PORT || PORT, _ => console.log(`API running on port ${PORT}`))
+    .listen(process.env.PORT || PORT, _ => console.log(`API running on port ${PORT}. Path: /${PATH}`))
