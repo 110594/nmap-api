@@ -1,0 +1,24 @@
+{
+  "name": "nmap-api",
+  "version": "1.0.0",
+  "description": "--------\r nmap-api\r --------",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/110594/nmap-api.git"
+  },
+  "author": "110594 (0zl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/110594/nmap-api/issues"
+  },
+  "homepage": "https://github.com/110594/nmap-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "evilscan": "^1.8.1",
+    "express": "^4.17.2"
+  }
+}
